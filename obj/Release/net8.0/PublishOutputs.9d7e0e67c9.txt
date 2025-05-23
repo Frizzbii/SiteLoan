@@ -1,0 +1,4 @@
+/home/aydlig/Documents/Projects/SiteLoan/docs/docs/sample-data/weather.json
+/home/aydlig/Documents/Projects/SiteLoan/docs/docs/_framework/blazor.boot.json
+/home/aydlig/Documents/Projects/SiteLoan/docs/emcc-props.json
+/home/aydlig/Documents/Projects/SiteLoan/docs/web.config
