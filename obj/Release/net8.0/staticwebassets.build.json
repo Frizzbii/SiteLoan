@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OFX+SPGtCn1F1ZcUFgMv/bwGLCqT97BgV9jjQSvV704=",
+  "Hash": "tf5afVmX3By6HebVQnzlPOxzIkqVPPpfCXeqhvAbDiQ=",
   "Source": "SiteLoan",
   "BasePath": "SiteLoan",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "3msxigvu9x",
-      "Integrity": "GxHrMxsVnpRF/lCu+86sFaKFi6Nezr3Pggh7C97k5EM=",
+      "Fingerprint": "qcxqevl5fo",
+      "Integrity": "WmWGtAO12a0GIu9DkDdmmLC6GhEHMrJCtNIevwDoMCI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Release/net8.0/blazor.boot.json"
@@ -892,8 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "jdo7vbwj0x",
-      "Integrity": "2T2GEwBb+0ug+TmTjCNTx7DS+79IZ+Tld9e5wgag6ds=",
+      "Fingerprint": "ztzzqgfzu0",
+      "Integrity": "J+pg9CImaopaEfMIPv4Ctqj6ZSYFDpcGRVYpWIqLjik=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Release/net8.0/SiteLoan.pdb"
@@ -913,8 +913,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "rtbkx4bjui",
-      "Integrity": "3zlh+PfFj1A9WZ4cKBpllON9+qNHaIramMrddVFtkUc=",
+      "Fingerprint": "aeya2c9n8p",
+      "Integrity": "og7GXY3W/EsxECiqe25LTZ7sgYoH0/y4/tpjH3uEQUk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/webcil/SiteLoan.wasm"
@@ -4574,7 +4574,7 @@
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/System.IO.Compression.Brotli.wasm"
     },
     {
-      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-rtbkx4bjui.gz",
+      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-aeya2c9n8p.gz",
       "SourceId": "SiteLoan",
       "SourceType": "Computed",
       "ContentRoot": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/",
@@ -4588,8 +4588,8 @@
       "RelatedAsset": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/SiteLoan.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ricrcfh21r",
-      "Integrity": "IzAwwen/XrViI2kRxCc0657InAdqrX3v7Kr3F4P9chc=",
+      "Fingerprint": "j5mw30cykk",
+      "Integrity": "J1tRCRfz158LkhSXdfwNaF0x3073mgG/MlYB05RBa8g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/SiteLoan.wasm"
@@ -4910,7 +4910,7 @@
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/System.Linq.Queryable.wasm"
     },
     {
-      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-jdo7vbwj0x.gz",
+      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-ztzzqgfzu0.gz",
       "SourceId": "SiteLoan",
       "SourceType": "Computed",
       "ContentRoot": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/",
@@ -4924,8 +4924,8 @@
       "RelatedAsset": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/SiteLoan.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "1ltj2w6olw",
-      "Integrity": "hT6bDxwoVUppTa0hHokhilzVkm6grpStsZ4pVMtOdkk=",
+      "Fingerprint": "38w8iojxqj",
+      "Integrity": "3YjSDKeT4CzurZF3nOk0xyKQnEeoHY0WiiNaC0CSMIg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/SiteLoan.pdb"
@@ -8144,7 +8144,7 @@
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/System.IO.Pipelines.wasm"
     },
     {
-      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-3msxigvu9x.gz",
+      "Identity": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-qcxqevl5fo.gz",
       "SourceId": "SiteLoan",
       "SourceType": "Computed",
       "ContentRoot": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/",
@@ -8158,8 +8158,8 @@
       "RelatedAsset": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5ui7rt26l6",
-      "Integrity": "HYqOX8yf5+1ygR/2nIckhbXqv/eSjViHFTEwtx2UlPc=",
+      "Fingerprint": "8gqy1hxv0u",
+      "Integrity": "aA8KGt1iCcQQSKn2AE0OpqdGJqSPS9ywRDdDh1NjKaM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/wwwroot/_framework/blazor.boot.json"
@@ -8836,7 +8836,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GxHrMxsVnpRF/lCu+86sFaKFi6Nezr3Pggh7C97k5EM=\""
+          "Value": "\"WmWGtAO12a0GIu9DkDdmmLC6GhEHMrJCtNIevwDoMCI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:30:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WmWGtAO12a0GIu9DkDdmmLC6GhEHMrJCtNIevwDoMCI="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/blazor.boot.json",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-qcxqevl5fo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000115340254"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8669"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aA8KGt1iCcQQSKn2AE0OpqdGJqSPS9ywRDdDh1NjKaM=\""
         },
         {
           "Name": "Last-Modified",
@@ -8845,45 +8884,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GxHrMxsVnpRF/lCu+86sFaKFi6Nezr3Pggh7C97k5EM="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/blazor.boot.json",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-3msxigvu9x.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000115313653"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8671"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HYqOX8yf5+1ygR/2nIckhbXqv/eSjViHFTEwtx2UlPc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -8899,19 +8899,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"GxHrMxsVnpRF/lCu+86sFaKFi6Nezr3Pggh7C97k5EM=\""
+          "Value": "W/\"WmWGtAO12a0GIu9DkDdmmLC6GhEHMrJCtNIevwDoMCI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GxHrMxsVnpRF/lCu+86sFaKFi6Nezr3Pggh7C97k5EM="
+          "Value": "sha256-WmWGtAO12a0GIu9DkDdmmLC6GhEHMrJCtNIevwDoMCI="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-3msxigvu9x.gz",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-qcxqevl5fo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8920,7 +8920,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8671"
+          "Value": "8669"
         },
         {
           "Name": "Content-Type",
@@ -8928,11 +8928,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HYqOX8yf5+1ygR/2nIckhbXqv/eSjViHFTEwtx2UlPc=\""
+          "Value": "\"aA8KGt1iCcQQSKn2AE0OpqdGJqSPS9ywRDdDh1NjKaM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
+          "Value": "Fri, 23 May 2025 19:28:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8950,7 +8950,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HYqOX8yf5+1ygR/2nIckhbXqv/eSjViHFTEwtx2UlPc="
+          "Value": "sha256-aA8KGt1iCcQQSKn2AE0OpqdGJqSPS9ywRDdDh1NjKaM="
         }
       ]
     },
@@ -14453,11 +14453,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2T2GEwBb+0ug+TmTjCNTx7DS+79IZ+Tld9e5wgag6ds=\""
+          "Value": "\"J+pg9CImaopaEfMIPv4Ctqj6ZSYFDpcGRVYpWIqLjik=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:28:21 GMT"
+          "Value": "Fri, 23 May 2025 19:30:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14467,13 +14467,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2T2GEwBb+0ug+TmTjCNTx7DS+79IZ+Tld9e5wgag6ds="
+          "Value": "sha256-J+pg9CImaopaEfMIPv4Ctqj6ZSYFDpcGRVYpWIqLjik="
         }
       ]
     },
     {
       "Route": "_framework/SiteLoan.pdb",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-jdo7vbwj0x.gz",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-ztzzqgfzu0.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -14492,11 +14492,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hT6bDxwoVUppTa0hHokhilzVkm6grpStsZ4pVMtOdkk=\""
+          "Value": "\"3YjSDKeT4CzurZF3nOk0xyKQnEeoHY0WiiNaC0CSMIg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
+          "Value": "Fri, 23 May 2025 19:28:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14516,19 +14516,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"2T2GEwBb+0ug+TmTjCNTx7DS+79IZ+Tld9e5wgag6ds=\""
+          "Value": "W/\"J+pg9CImaopaEfMIPv4Ctqj6ZSYFDpcGRVYpWIqLjik=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2T2GEwBb+0ug+TmTjCNTx7DS+79IZ+Tld9e5wgag6ds="
+          "Value": "sha256-J+pg9CImaopaEfMIPv4Ctqj6ZSYFDpcGRVYpWIqLjik="
         }
       ]
     },
     {
       "Route": "_framework/SiteLoan.pdb.gz",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-jdo7vbwj0x.gz",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-ztzzqgfzu0.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14545,11 +14545,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hT6bDxwoVUppTa0hHokhilzVkm6grpStsZ4pVMtOdkk=\""
+          "Value": "\"3YjSDKeT4CzurZF3nOk0xyKQnEeoHY0WiiNaC0CSMIg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
+          "Value": "Fri, 23 May 2025 19:28:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14567,7 +14567,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hT6bDxwoVUppTa0hHokhilzVkm6grpStsZ4pVMtOdkk="
+          "Value": "sha256-3YjSDKeT4CzurZF3nOk0xyKQnEeoHY0WiiNaC0CSMIg="
         }
       ]
     },
@@ -14590,7 +14590,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3zlh+PfFj1A9WZ4cKBpllON9+qNHaIramMrddVFtkUc=\""
+          "Value": "\"og7GXY3W/EsxECiqe25LTZ7sgYoH0/y4/tpjH3uEQUk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:30:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-og7GXY3W/EsxECiqe25LTZ7sgYoH0/y4/tpjH3uEQUk="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SiteLoan.wasm",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-aeya2c9n8p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000132520541"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7545"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J1tRCRfz158LkhSXdfwNaF0x3073mgG/MlYB05RBa8g=\""
         },
         {
           "Name": "Last-Modified",
@@ -14599,45 +14638,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-3zlh+PfFj1A9WZ4cKBpllON9+qNHaIramMrddVFtkUc="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/SiteLoan.wasm",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-rtbkx4bjui.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000132573247"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7542"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"IzAwwen/XrViI2kRxCc0657InAdqrX3v7Kr3F4P9chc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -14653,19 +14653,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"3zlh+PfFj1A9WZ4cKBpllON9+qNHaIramMrddVFtkUc=\""
+          "Value": "W/\"og7GXY3W/EsxECiqe25LTZ7sgYoH0/y4/tpjH3uEQUk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3zlh+PfFj1A9WZ4cKBpllON9+qNHaIramMrddVFtkUc="
+          "Value": "sha256-og7GXY3W/EsxECiqe25LTZ7sgYoH0/y4/tpjH3uEQUk="
         }
       ]
     },
     {
       "Route": "_framework/SiteLoan.wasm.gz",
-      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-rtbkx4bjui.gz",
+      "AssetFile": "/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-aeya2c9n8p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14674,7 +14674,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7542"
+          "Value": "7545"
         },
         {
           "Name": "Content-Type",
@@ -14682,11 +14682,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"IzAwwen/XrViI2kRxCc0657InAdqrX3v7Kr3F4P9chc=\""
+          "Value": "\"J1tRCRfz158LkhSXdfwNaF0x3073mgG/MlYB05RBa8g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 May 2025 19:24:36 GMT"
+          "Value": "Fri, 23 May 2025 19:28:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14704,7 +14704,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-IzAwwen/XrViI2kRxCc0657InAdqrX3v7Kr3F4P9chc="
+          "Value": "sha256-J1tRCRfz158LkhSXdfwNaF0x3073mgG/MlYB05RBa8g="
         }
       ]
     },

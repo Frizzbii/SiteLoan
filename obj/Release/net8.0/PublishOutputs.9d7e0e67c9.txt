@@ -1,11 +1,2 @@
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/web.config
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/docs/sample-data/weather.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/docs/_framework/blazor.boot.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/emcc-props.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/sample-data/weather.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/SiteLoan.staticwebassets.endpoints.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/wwwroot/SiteLoan/sample-data/weather.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/wwwroot/SiteLoan/_framework/blazor.boot.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/docs/_framework/blazor.boot.json
 /home/aydlig/Documents/Projects/SiteLoan/docs/emcc-props.json
 /home/aydlig/Documents/Projects/SiteLoan/docs/web.config
