@@ -1,2 +1,0 @@
-/home/aydlig/Documents/Projects/SiteLoan/docs/emcc-props.json
-/home/aydlig/Documents/Projects/SiteLoan/docs/web.config
