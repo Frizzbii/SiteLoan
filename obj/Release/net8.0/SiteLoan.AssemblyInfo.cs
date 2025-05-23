@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4869298af69a9805e13b47a5d545d52640d645")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb4dc84a28de1f5258e684fde91116558dc5bb60")]
 [assembly: System.Reflection.AssemblyProductAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

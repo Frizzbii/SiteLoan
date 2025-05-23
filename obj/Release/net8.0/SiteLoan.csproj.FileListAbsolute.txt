@@ -2054,9 +2054,6 @@ C:/Users/tom.grandjean/Documents/gd/projets/SiteLoan/obj/Release/net8.0/ref/Site
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/915rf0pbzk-tptq2av103.gz
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/7hf6ndn734-lfu7j35m59.gz
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/z96v41t2ad-oyz0vx2fzb.gz
-/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-tw1lvpcm5r.gz
-/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-qk95fgugaf.gz
-/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-fd8xm3hpty.gz
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/staticwebassets.build.json
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/staticwebassets.development.json
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/staticwebassets.build.endpoints.json
@@ -2071,3 +2068,13 @@ C:/Users/tom.grandjean/Documents/gd/projets/SiteLoan/obj/Release/net8.0/ref/Site
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/refint/SiteLoan.dll
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/SiteLoan.pdb
 /home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/ref/SiteLoan.dll
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/web.config
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/docs/sample-data/weather.json
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/docs/_framework/blazor.boot.json
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/emcc-props.json
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/SiteLoan.staticwebassets.endpoints.json
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/wwwroot/SiteLoan/sample-data/weather.json
+/home/aydlig/Documents/Projects/SiteLoan/bin/Release/net8.0/docs/wwwroot/SiteLoan/_framework/blazor.boot.json
+/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/2gab6w5jjk-rtbkx4bjui.gz
+/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/5s7fjjk7s3-jdo7vbwj0x.gz
+/home/aydlig/Documents/Projects/SiteLoan/obj/Release/net8.0/compressed/vzcgxkja77-3msxigvu9x.gz
