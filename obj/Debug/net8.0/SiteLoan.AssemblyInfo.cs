@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39db0b17fef8448f4b5bbc1d86f042e0fccde688")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+075068949d993899f0549fdb17ca883bb7f4d687")]
 [assembly: System.Reflection.AssemblyProductAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SiteLoan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
