@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,10 +7,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
   <header>
@@ -30,9 +27,14 @@
     <section id="hero">
       <div class="container centered">
         <div>
-        <h1>Ton futur chargé de com' préféré</h1>
-        <p> J'écris, je crée et j'apprends</p>
+          <h1>Ton futur chargé de com' préféré</h1>
+          <p>J'écris, je crée et j'apprends</p>
         </div>
+      </div>
+      <div class="wave-separator">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path d="M0,192 C120,160 240,240 360,192 C480,144 600,240 720,192 C840,144 960,240 1080,192 C1200,144 1320,240 1440,192 L1440,320 L0,320 Z" fill="#ED6237"></path>
+        </svg>
       </div>
     </section>
 
@@ -51,24 +53,38 @@
       </div>
     </section>
 
-    <section id="services">
-      <div class="container">
-        <h2>Nos services</h2>
-        
+    <section id="realisations">
+      <div class="container centered">
+        <div>
+          <h2>Réalisations</h2>
+          <div class="centered">
+            <a class="realisations"><img src="assets/img/logo.png"></a>
+            <a class="realisations"><img src="assets/img/logo.png"></a>
+            <a class="realisations"><img src="assets/img/logo.png"></a>
+            <a class="realisations"><img src="assets/img/logo.png"></a>
+            <a class="realisations"><img src="assets/img/logo.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="wave-separator flip">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path d="M0,192 C120,160 240,240 360,192 C480,144 600,240 720,192 C840,144 960,240 1080,192 C1200,144 1320,240 1440,192 L1440,0 L0,0 Z" fill="#ED6237"></path>
+        </svg>
       </div>
     </section>
 
-    <!-- <section id="contact">
-      <div class="container">
-        <h2>Contactez-nous</h2>
-        <form id="contact-form">
-          <input type="text" placeholder="Nom" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Envoyer</button>
-        </form>
+    <section id="contact">
+      <div class="container contact-grid centered">
+        <div class="text-carousel">
+          <div class="text-slide">Un projet ?</div>
+          <div class="text-slide">Des questions ?</div>
+          <div class="text-slide underlined">Contactez-moi !</div>
+        </div>
+        <div class="contact-image">
+          <img src="assets/img/contact-image.jpg" alt="Illustration contact">
+        </div>
       </div>
-    </section> -->
+    </section>
   </main>
 
   <footer>
