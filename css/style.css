@@ -293,3 +293,17 @@ section#realisations {
   top: auto;
   bottom: -1px;
 }
+
+.wave-separator.custom {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separator.custom svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(1px); /* Ajuste pour éviter les débordements */
+}
