@@ -118,35 +118,9 @@ footer {
 }
 
 /* === SECTIONS === */
-#hero {
-  background: white;
-  color: #333333;
-  padding: 10vh 0;
-  text-align: center;
-  height: 80vh;
-  margin: 0;
-}
-
-#competences {
-  background: #333333;
-  color: white;
-  padding: 5vh 0;
-  text-align: center;
-  height: 40vh;
-  margin: 0;
-}
 
 .competences {
   margin: 5vh 5vw;
-}
-
-#realisations {
-  background: #333333;
-  color: white;
-  padding: 10vh 0;
-  text-align: center;
-  height: 60vh;
-  margin: 0;
 }
 
 .realisations {
@@ -154,13 +128,6 @@ footer {
 }
 
 /* === CONTACT SECTION === */
-#contact {
-  background: white;
-  color: #333333;
-  height: 80vh;
-  align-items: center;
-  margin: 0;
-}
 
 .contact-grid {
   display: flex;
@@ -222,6 +189,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .contact-image img {
@@ -240,6 +208,10 @@ footer {
     justify-content: center;
     margin-bottom: 2rem;
   }
+
+  .competences-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .text-carousel, .contact-image {
@@ -252,17 +224,70 @@ section#hero {
   position: relative;
   background: white;
   color: #333333;
-  padding: 10vh 0;
+  padding: 0;
   text-align: center;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   margin: 0;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hero-text {
+  flex: 1;
+  font-size: 1.5rem;
 }
 
 section#realisations {
   position: relative;
   background: #333333;
   color: white;
+  padding: 10vh 0;
+  text-align: center;
+  height: 85vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+section#competences {
+  display: flex; /* ou block si tu n’as pas besoin d'alignement interne */
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05); /* optionnel, juste pour lisibilité */
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  text-align: center;
+}
+
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; /* espace entre les éléments */
+  margin-top: 2rem;
+}
+
+section#contact {
+  position: relative;
+  background: white;
+  color: #333;
   padding: 10vh 0;
   text-align: center;
   height: 60vh;
