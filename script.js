@@ -1,3 +1,24 @@
+document.querySelectorAll('.competences').forEach((competence) => {
+
+  competence.addEventListener('click', () => {
+
+    // Ferme les autres compétences si on veut un seul ouvert à la fois :
+
+    document.querySelectorAll('.competences').forEach((el) => {
+
+      if (el !== competence) el.classList.remove('open');
+
+    });
+
+
+
+    competence.classList.toggle('open');
+
+  });
+
+});
+
+
 // Typewriter for H2
 const texts = ["Un projet ?", "Des questions ?", "Contactez moi !"];
 let index = 0;
@@ -15,11 +36,11 @@ function type() {
   const currentText = texts[index];
 
   // Toggle underline on the h2 element
-  if (index === 2) {
+  /*if (index === 2) {
     h2Element.classList.add("underlined");
   } else {
     h2Element.classList.remove("underlined");
-  }
+  }*/
 
   if (!deleting) {
     typewriterElement.textContent = currentText.substring(0, subIndex + 1);
@@ -54,11 +75,11 @@ function typeTitle() {
   const currentTitle = titles[titleIndex];
 
   // Toggle underline on the h1 element
-  if (titleIndex === 2) {
+  /*if (titleIndex === 2) {
     h1Element.classList.add("underlined");
   } else {
     h1Element.classList.remove("underlined");
-  }
+  }*/
 
   if (!deletingTitle) {
     typewriterElementTitle.textContent = currentTitle.substring(0, subTitleIndex + 1);
