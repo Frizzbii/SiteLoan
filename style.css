@@ -326,3 +326,19 @@ section#contact {
   height: 100%;
   transform: translateY(1px); /* Ajuste pour éviter les débordements */
 }
+
+.competence-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.competences.open .competence-details {
+  max-height: 300px; /* Ajuste selon le contenu */
+  opacity: 1;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}

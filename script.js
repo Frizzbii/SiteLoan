@@ -1,6 +1,10 @@
+document.querySelectorAll('.competences').forEach((competence) => {
+  competence.addEventListener('click', () => {
+    // Ferme les autres compétences si on veut un seul ouvert à la fois :
+    document.querySelectorAll('.competences').forEach((el) => {
+      if (el !== competence) el.classList.remove('open');
+    });
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Merci pour votre message !");
-  this.reset();
+    competence.classList.toggle('open');
+  });
 });
