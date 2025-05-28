@@ -36,11 +36,11 @@ function type() {
   const currentText = texts[index];
 
   // Toggle underline on the h2 element
-  /*if (index === 2) {
+  if (index === 2) {
     h2Element.classList.add("underlined");
   } else {
     h2Element.classList.remove("underlined");
-  }*/
+  }
 
   if (!deleting) {
     typewriterElement.textContent = currentText.substring(0, subIndex + 1);
@@ -75,11 +75,11 @@ function typeTitle() {
   const currentTitle = titles[titleIndex];
 
   // Toggle underline on the h1 element
-  /*if (titleIndex === 2) {
+  if (titleIndex === 2) {
     h1Element.classList.add("underlined");
   } else {
     h1Element.classList.remove("underlined");
-  }*/
+  }
 
   if (!deletingTitle) {
     typewriterElementTitle.textContent = currentTitle.substring(0, subTitleIndex + 1);
@@ -105,4 +105,44 @@ function typeTitle() {
 document.addEventListener("DOMContentLoaded", () => {
   type();
   typeTitle();
+});
+
+$(document).ready(function () {
+  var mySwiper = new Swiper(".swiper-container", {
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    speed: 500,
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar"
+    },
+    loop: false,
+    effect: "slide",
+    spaceBetween: 30,
+    on: {
+      init: function () {
+        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        $(".swiper-pagination-custom .swiper-pagination-switch").eq(this.realIndex).addClass("active");
+      },
+      slideChangeTransitionStart: function () {
+        $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        $(".swiper-pagination-custom .swiper-pagination-switch").eq(this.realIndex).addClass("active");
+      }
+    }
+  });
+
+  $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+    const index = $(this).index();
+    mySwiper.slideTo(index);
+    $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+    $(this).addClass("active");
+  });
 });

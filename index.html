@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
@@ -26,7 +27,7 @@
     <section id="hero">
       <div class="hero-content">
         <div class="hero-image">
-          <img src="assets/img/test.webp" alt="Image de présentation" />
+          <img src="assets/img/loan.png" alt="Image de présentation" />
         </div>
         <div class="hero-text">
           <h1 id="typewriter-title"><span id="typewriter-titletext"></span><span class="cursor">|</span></h1>
@@ -50,25 +51,25 @@
       <div class="container">
         <div>
           <div class="competences-grid">
-            <a class="competences"><img style="width: 2vw; height: 3vh;" src="assets/img/test.webp">
+            <a class="competences"><img style="width: 2vw; height: 3vh;" src="assets/img/loan.png">
               super beau ~~~~~~~~~~ +
               <div class="competence-details">
                 <p>Description détaillée de cette compétence. Tu peux y mettre ce que tu veux !</p>
               </div>
             </a>
-            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/test.webp">
+            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/loan.png">
               très intelligent ~~~~~~~~~~ +
               <div class="competence-details">
                 <p>Description détaillée de cette compétence. Tu peux y mettre ce que tu veux !</p>
               </div>
             </a>
-            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/test.webp">
+            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/loan.png">
               cultivé ~~~~~~~~~~ +
               <div class="competence-details">
                 <p>Description détaillée de cette compétence. Tu peux y mettre ce que tu veux !</p>
               </div>
             </a>
-            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/test.webp">
+            <a class="competences"><img style="width: 2vw; height: 3vh;"  src="assets/img/loan.png">
               humour incroyable ~~~~~~~~~~ +
               <div class="competence-details">
                 <p>Description détaillée de cette compétence. Tu peux y mettre ce que tu veux !</p>
@@ -83,13 +84,42 @@
       <div class="container centered">
         <div>
           <div class="centered">
-            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/test.webp"></a>
-            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/test.webp"></a>
-            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/test.webp"></a>
+            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/loan.png"></a>
+            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/loan.png"></a>
+            <a class="realisations"><img style="width: 20vw; height: 50vh;" src="assets/img/loan.png"></a>
           </div>
         </div>
       </div>
-      <div class="wave-separator custom">
+    </section>
+
+    <section id="parcours">
+      <div class="container">
+        <div class="swiper-container">
+          <!-- Custom pagination -->
+          <ul class="swiper-pagination-custom">
+            <li class="swiper-pagination-switch active"><span class="switch-title">1911</span></li>
+            <li class="swiper-pagination-switch"><span class="switch-title">1970</span></li>
+            <li class="swiper-pagination-switch"><span class="switch-title">2021</span></li>
+            <li class="swiper-pagination-switch"><span class="switch-title">3000</span></li>
+          </ul>
+
+          <!-- Progress bar -->
+          <div class="swiper-pagination swiper-pagination-progressbar"></div>
+
+          <!-- Slides -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><h2>Slide 1</h2><p>Contenu 1911...</p></div>
+            <div class="swiper-slide"><h2>Slide 2</h2><p>Contenu 1970...</p></div>
+            <div class="swiper-slide"><h2>Slide 3</h2><p>Contenu 2021...</p></div>
+            <div class="swiper-slide"><h2>Slide 4</h2><p>Contenu 3000...</p></div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="wave-separator custom" style="bottom: -103vh;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
           <defs>
             <style>
@@ -107,7 +137,7 @@
       <div class="container contact-grid centered">
         <h2 id="typewriter" style="width: 50%;"><span id="typewriter-text"></span><span class="cursor">|</span></h2>
         <div class="contact-image" style="width: 50%;">
-          <img src="assets/img/test.webp" alt="Illustration contact">
+          <img src="assets/img/carte.svg" alt="Illustration contact">
         </div>
       </div>
     </section>
@@ -122,6 +152,8 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
