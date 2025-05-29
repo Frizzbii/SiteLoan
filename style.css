@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* === GENERICS === */
 * {
   margin: 0;
@@ -6,8 +7,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
   color: #333;
 }
 
@@ -33,7 +34,6 @@ body {
   height: 0.5vh;
   background-color: #ED6237;
 }*/
-
 section {
   padding: 50px 0;
 }
@@ -61,8 +61,8 @@ footer {
   top: 20px;
   right: 20px;
   z-index: 9999;
-  width: 150px;
   text-align: right;
+  font-size: 1.5rem;
 }
 
 .menu-toggle {
@@ -97,7 +97,7 @@ footer {
   text-decoration: none;
   color: #333333;
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-variation-settings: "wght" 400;
   transition: background-color 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease, font-variation-settings 0.3s ease;
 }
@@ -126,9 +126,7 @@ footer {
   height: 2px;
   background-color: #ED6237;
 } */
-
 /* === SECTIONS === */
-
 .competences {
   margin: 0;
 }
@@ -138,7 +136,6 @@ footer {
 }
 
 /* === CONTACT SECTION === */
-
 .contact-grid {
   display: flex;
   align-items: center;
@@ -164,9 +161,17 @@ footer {
 }
 
 /* décalage d'animation pour chaque mot */
-.text-slide:nth-child(1) { animation-delay: 0s; }
-.text-slide:nth-child(2) { animation-delay: 3s; }
-.text-slide:nth-child(3) { animation-delay: 6s; }
+.text-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.text-slide:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.text-slide:nth-child(3) {
+  animation-delay: 6s;
+}
 
 /* animation */
 @keyframes fadeText {
@@ -193,13 +198,11 @@ footer {
     opacity: 0;
   }
 }
-
 .contact-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .contact-image img {
@@ -213,17 +216,14 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-
   .text-carousel {
     justify-content: center;
     margin-bottom: 2rem;
   }
-
   .competences-grid {
     grid-template-columns: 1fr;
   }
 }
-
 .text-carousel, .contact-image {
   display: flex;
   align-items: center;
@@ -239,7 +239,7 @@ section#hero {
   height: 70vh;
   overflow: hidden;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .hero-content {
@@ -250,7 +250,7 @@ section#hero {
   margin: 0 auto;
 }
 
-.hero-image{
+.hero-image {
   max-width: 50%;
   align-content: center;
 }
@@ -260,7 +260,7 @@ section#hero {
   height: auto;
   border-radius: 8px;
   display: block;
-  margin-left: 10vw;
+  margin-left: 20vw;
   margin-right: auto;
 }
 
@@ -268,6 +268,7 @@ section#hero {
   flex: 1;
   font-size: 1.5rem;
   max-width: 50%;
+  margin-right: 20vw;
 }
 
 section#realisations {
@@ -360,17 +361,16 @@ section#contact {
 }
 
 .cursor {
-      display: inline-block;
-      width: 1ch;
-      animation: blink 1s step-start infinite;
-    }
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s step-start infinite;
+}
 
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 #typewriter {
   font-size: 3rem;
 }
@@ -378,5 +378,122 @@ section#contact {
 #parcours {
   background-color: #333;
   color: white;
-  height: 40vh;
+  height: 50vh;
 }
+
+:root {
+  --swiper-theme-color: white;
+}
+
+.swiper-container-wrapper--timeline .swiper-slide {
+  display: flex;
+  background: #333;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.swiper-container-wrapper--timeline .swiper-slide .container {
+  padding: 0;
+  width: 100%;
+}
+.swiper-container-wrapper--timeline .swiper-slide .title {
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.5s ease 0.5s;
+}
+.swiper-container-wrapper--timeline .swiper-slide-active .title {
+  opacity: 1;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar {
+  position: relative;
+  margin-bottom: 70px;
+  background-color: transparent;
+  height: 4px;
+  border-bottom: 1px solid #ED6237;
+  width: 75%;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
+  background-color: white;
+  height: 3px;
+  top: 2px;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
+  position: absolute;
+  top: 2px;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  content: "";
+}
+.swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
+  position: absolute;
+  top: 3px;
+  right: -100%;
+  width: 100%;
+  height: 1px;
+  background-color: #ED6237;
+  content: "";
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom {
+  position: relative;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  line-height: 1.66;
+  bottom: 0;
+  z-index: 11;
+  width: 75%;
+  display: flex;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title {
+  position: absolute;
+  font-weight: 400;
+  right: 0;
+  transform: translateX(50%);
+  transition: 0.2s all ease-in-out;
+  transition-delay: 0s;
+  cursor: pointer;
+  z-index: 1;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch .switch-title:after {
+  position: absolute;
+  top: calc(100% + 19px);
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 2rem;
+  content: "";
+  transition: 0.2s all ease-in-out;
+  transition-delay: 0s;
+  z-index: 1;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active .switch-title {
+  font-weight: 400;
+  transition-delay: 0.4s;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active .switch-title:after {
+  background: white;
+  width: 25px;
+  height: 25px;
+  transition-delay: 0.4s;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active ~ .swiper-pagination-switch .switch-title {
+  color: #ED6237;
+  font-weight: 16px;
+}
+.swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active ~ .swiper-pagination-switch .switch-title:after {
+  background: #ED6237;
+}
+
+/*# sourceMappingURL=style.css.map */
