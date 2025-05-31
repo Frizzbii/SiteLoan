@@ -137,50 +137,7 @@ footer {
 }
 
 .realisations {
-  position: relative;
-  display: inline-block;
   margin: 5vh 5vw;
-  width: 20vw;
-  height: 50vh;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.realisations img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: 0.3s ease;
-}
-
-/* Overlay caché par défaut */
-.realisations .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fond sombre semi-transparent */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s ease;
-}
-
-/* Texte stylisé */
-.realisations .text {
-  color: white;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  padding: 1em;
-}
-
-/* Au hover, on affiche l'overlay */
-.realisations:hover .overlay {
-  opacity: 1;
 }
 
 /* === CONTACT SECTION === */
@@ -424,8 +381,6 @@ section#contact {
   background-color: #333;
   color: white;
   height: 55vh;
-  width: 100%;
-  padding: 5rem;
 }
 
 :root {
@@ -471,7 +426,7 @@ section#contact {
         position: absolute;
         top: 2px;
         left: -100%;
-        width: 100%;
+        width: 0%;
         height: 3px;
         background-color: $primary-color;
         content: "";
@@ -480,7 +435,7 @@ section#contact {
         position: absolute;
         top: 3px;
         right: -100%;
-        width: 100%;
+        width: 0%;
         height: 1px;
         background-color: $secondary-color;
         content: "";
