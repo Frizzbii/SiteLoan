@@ -239,10 +239,10 @@ section#hero {
   color: #333333;
   padding: 0;
   text-align: center;
-  height: 70vh;
+  height: 90vh;
   overflow: hidden;
   margin: 0;
-  padding: 2rem 2rem;
+  padding: 12rem 2rem;
 }
 
 .hero-content {
@@ -289,7 +289,7 @@ section#competences {
   display: flex; /* ou block si tu n’as pas besoin d'alignement interne */
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 3rem;
   background-color: rgba(255, 255, 255, 0.05); /* optionnel, juste pour lisibilité */
   text-decoration: none;
   color: white;
@@ -318,7 +318,6 @@ section#contact {
 /* === WAVE SEPARATOR === */
 .wave-separator {
   position: absolute;
-  bottom: -16vh;
   left: 0;
   width: 100%;
   line-height: 0;
@@ -382,7 +381,7 @@ section#contact {
 #parcours {
   background-color: #333;
   color: white;
-  height: 50vh;
+  height: 45vh;
 }
 
 :root {
