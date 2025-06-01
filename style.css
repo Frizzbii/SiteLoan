@@ -427,8 +427,8 @@ section#contact {
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
   position: absolute;
   top: 3px;
-  right: -100%;
-  width: 0%;
+  right: -27%;
+  width: 50%;
   height: 1px;
   background-color: #ED6237;
   content: "";
