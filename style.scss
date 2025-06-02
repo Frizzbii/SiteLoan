@@ -12,6 +12,7 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;;
   color: #333;
+  background-color: #333;
 }
 
 .container {
@@ -282,7 +283,7 @@ section#hero {
   color: #333333;
   padding: 0;
   text-align: center;
-  height: 90vh;
+  height: 89vh;
   overflow: hidden;
   margin: 0;
   padding: 12rem 2rem;
@@ -291,7 +292,7 @@ section#hero {
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   margin: 0 auto;
 }
@@ -299,6 +300,9 @@ section#hero {
 .hero-image{
   max-width: 50%;
   align-content: center;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 3vh;
 }
 
 .hero-image img {
@@ -306,15 +310,15 @@ section#hero {
   height: auto;
   border-radius: 8px;
   display: block;
-  margin-left: 20vw;
-  margin-right: auto;
+  margin-right: 30vw;
+  margin-left: auto;
 }
 
 .hero-text {
   flex: 1;
   font-size: 1.5rem;
   max-width: 50%;
-  margin-right: 20vw;
+  margin-left: 30vw;
 }
 
 section#realisations {
@@ -351,16 +355,15 @@ section#contact {
   position: relative;
   background: white;
   color: #333;
-  padding: 10vh 0;
+  padding-top: 25vh;
   text-align: center;
-  height: 60vh;
+  height: 80vh;
   overflow: hidden;
-  margin: 5vh 0;
+  margin: 0;
 }
 
 /* === WAVE SEPARATOR === */
 .wave-separator {
-  position: absolute;
   left: 0;
   width: 100%;
   line-height: 0;
@@ -370,9 +373,8 @@ section#contact {
 
 .wave-separator svg {
   display: block;
-  width: 100%;
-  height: 100px;
-  position: relative;
+  width: 1920px;
+  height: auto;
 }
 
 .wave-separator.custom {
@@ -383,9 +385,10 @@ section#contact {
 
 .wave-separator.custom svg {
   display: block;
-  width: 100%;
+  width: 1920px;
   height: auto;
-  transform: translateY(1px); /* Ajuste pour éviter les débordements */
+  overflow: hidden;
+  transform: rotate(180deg);
 }
 
 .competence-details {
@@ -423,7 +426,7 @@ section#contact {
 #parcours {
   background-color: #333;
   color: white;
-  height: 55vh;
+  height: 40vh;
 }
 
 :root {
@@ -550,3 +553,114 @@ section#contact {
     }
   }
 }
+
+// === RESPONSIVE ===
+@media screen and (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image,
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .menu-container {
+    font-size: 1.2rem;
+    width: auto;
+    right: 10px;
+    top: 10px;
+  }
+
+  .realisations {
+    width: 40vw;
+    height: 40vh;
+    margin: 2vh 2vw;
+  }
+
+  .text-slide {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .competences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .realisations {
+    width: 80vw;
+    height: 40vh;
+    margin: 2vh auto;
+  }
+
+  section#realisations {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  #typewriter {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-image,
+  .text-carousel {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .text-slide {
+    font-size: 2rem;
+  }
+
+  .swiper-pagination-custom {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-container {
+    font-size: 1rem;
+  }
+
+  .realisations {
+    width: 90vw;
+    height: 30vh;
+  }
+
+  .text-slide {
+    font-size: 1.8rem;
+  }
+
+  h1#typewriter-title,
+  h2#typewriter {
+    font-size: 1.8rem;
+  }
+
+  .swiper-pagination-custom .switch-title {
+    font-size: 0.8rem;
+  }
+}
+
