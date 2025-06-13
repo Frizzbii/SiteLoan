@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* === GENERICS === */
 * {
   margin: 0;
@@ -242,7 +243,7 @@ section#hero {
   color: #333333;
   padding: 12rem 2rem;
   text-align: center;
-  min-height: 89vh;
+  min-height: 80vh;
   overflow: hidden;
   margin: 0;
   display: flex;
@@ -261,15 +262,17 @@ section#hero {
 
 .hero-image {
   flex: 1;
-  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 20vw;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -280,8 +283,8 @@ section#hero {
   font-size: 1.5rem;
   max-width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: right;
+  justify-content: right;
 }
 
 /* === OTHER SECTIONS === */
@@ -400,7 +403,11 @@ section#contact {
   --swiper-theme-color: white;
 }
 
+.swiper-container-wrapper {
+  padding-left: 4.5vw;
+}
 .swiper-container-wrapper--timeline .swiper-slide {
+  padding-right: 5.5vw;
   display: flex;
   background: #333;
   align-items: center;
@@ -431,6 +438,7 @@ section#contact {
   background-color: white;
   height: 3px;
   top: 2px;
+  z-index: 2;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar:before {
   position: absolute;
@@ -440,6 +448,7 @@ section#contact {
   height: 3px;
   background-color: white;
   content: "";
+  z-index: 2;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar:after {
   position: absolute;
@@ -449,6 +458,7 @@ section#contact {
   height: 1px;
   background-color: #ED6237;
   content: "";
+  z-index: 1;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-custom {
   position: relative;
@@ -545,21 +555,33 @@ section#contact {
   section {
     padding: 40px 0;
   }
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 3rem;
+  /* Garder le layout horizontal pour tablette comme sur desktop */
+  section#hero {
+    padding: 0 2rem;
+    min-height: 0;
   }
-  .hero-image,
-  .hero-text {
-    max-width: 100%;
-    margin: 0 auto;
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .hero-image {
+    position: static;
+    flex: 1;
+    max-width: 45%;
+    left: auto;
   }
   .hero-image img {
-    max-width: 300px;
+    max-width: 100%;
   }
   .hero-text {
+    flex: 1;
+    max-width: 45%;
     font-size: 1.4rem;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .realisations {
     width: 35vw;
@@ -594,18 +616,40 @@ section#contact {
   section#parcours {
     padding: 2rem 0;
   }
+  /* Maintenir le layout horizontal pour tablette portrait aussi */
+  section#hero {
+    padding: 2rem 2rem;
+    min-height: 0;
+  }
   .hero-content {
-    gap: 2rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .hero-image {
+    position: static;
+    flex: 1;
+    max-width: 45%;
+    left: auto;
+  }
+  .hero-text {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    justify-content: flex-start;
   }
   .realisations {
     width: 40vw;
     height: 40vh;
     margin: 2vh 2vw;
   }
-  .contact-grid {
+  section#contact {
+    min-height: 15vh;
+    padding-top: 15vh;
+  }
+  /*.contact-grid {
     flex-direction: column;
     gap: 2rem;
-  }
+  }*/
   .contact-image,
   .text-carousel {
     width: 100%;
@@ -648,6 +692,26 @@ section#contact {
     grid-template-columns: 1fr;
     gap: 3vh;
   }
+  /* Layout mobile: titre au-dessus, image en dessous */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-image {
+    position: static;
+    flex: none;
+    max-width: 100%;
+    left: auto;
+    order: 2; /* Image après le texte */
+  }
+  .hero-text {
+    flex: none;
+    max-width: 100%;
+    order: 1; /* Texte avant l'image */
+    text-align: center;
+    justify-content: center;
+  }
   .realisations {
     width: 70vw;
     height: 35vh;
@@ -666,6 +730,17 @@ section#contact {
     padding-top: 15vh;
     min-height: 60vh;
   }
+  /* Contact mobile: titre en dessous de l'image */
+  .contact-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contact-grid h2 {
+    order: 2; /* Titre après l'image */
+  }
+  .contact-image {
+    order: 1; /* Image avant le titre */
+  }
   #typewriter {
     font-size: 1.8rem;
   }
@@ -675,15 +750,6 @@ section#contact {
   }
   .text-slide {
     font-size: 2rem;
-  }
-  .contact-grid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .swiper-pagination-custom {
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 95%;
   }
   .swiper-pagination-progressbar {
     width: 95%;
@@ -731,7 +797,7 @@ section#contact {
     padding: 0.5em;
   }
   section#contact {
-    padding-top: 12vh;
+    padding-top: 15vh;
     min-height: 50vh;
   }
   .text-slide {
@@ -829,7 +895,7 @@ section#contact {
     padding: 2rem 1rem;
   }
   section#contact {
-    padding-top: 10vh;
+    padding-top: 50vh;
     min-height: 100vh;
   }
   .hero-content {
