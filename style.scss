@@ -356,28 +356,204 @@ section#contact {
   transform: rotate(180deg);
 }
 
+/* === SECTION COMPETENCES - VERSION 1 === */
+section#competences {
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #333;
+  color: white;
+  min-height: 80vh;
+}
+
+/* Grille des compétences */
 .competences-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1vh;
-  margin-top: 2rem;
+  gap: 2rem;
+  align-items: start;
   width: 100%;
 }
 
+/* Carte de compétence */
+.competence-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 200px;
+  justify-content: flex-start;
+  border: 2px solid transparent;
+  
+  &:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba($secondary-color, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* En-tête de la compétence */
+.competence-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Icône de compétence (votre image SVG) */
+.competence-icon-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  //filter: brightness(0) invert(1); // Rend l'icône blanche
+  transition: all 0.3s ease;
+}
+
+.competence-item:hover .competence-icon-img {
+  //filter: brightness(0) saturate(100%) invert(46%) sepia(87%) saturate(2194%) hue-rotate(346deg) brightness(95%) contrast(88%); // Couleur orange au hover
+  transform: scale(1.1);
+}
+
+/* Titre de la compétence */
+.competence-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: $secondary-color;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Sous-titre de la compétence */
+.competence-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Détails expandables */
 .competence-details {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.2s ease;
-  padding: 0 10px;
-  font-size: 1rem;
+  transition: all 0.4s ease;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.competences.open .competence-details {
-  max-height: 300px;
+.competence-item.open .competence-details {
+  max-height: 200px;
   opacity: 1;
-  margin-top: 10px;
-  transition: all 0.4s ease;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Indicateur d'expansion */
+.expand-indicator {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+  color: $secondary-color;
+  margin-top: auto;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.competence-item.open .expand-indicator {
+  transform: rotate(45deg);
+}
+
+/* === RESPONSIVE POUR LES COMPETENCES === */
+
+/* Tablette portrait */
+@media screen and (max-width: 1023px) {
+  section#competences {
+    padding: 3rem 1.5rem;
+    min-height: 70vh;
+  }
+  
+  .competences-grid {
+    gap: 1.5rem;
+  }
+  
+  .competence-item {
+    padding: 1.5rem;
+    min-height: 180px;
+  }
+  
+  .competence-icon-img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .competence-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  section#competences {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .competences-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .competence-item {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+  
+  .competence-icon-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .competence-title {
+    font-size: 1.1rem;
+  }
+  
+  .competence-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .competence-details {
+    font-size: 0.85rem;
+  }
+}
+
+/* Très petit mobile */
+@media screen and (max-width: 479px) {
+  .competence-item {
+    padding: 1rem;
+    min-height: 140px;
+  }
+  
+  .competence-icon-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .competence-title {
+    font-size: 1rem;
+  }
 }
 
 .cursor {

@@ -18,6 +18,19 @@ document.querySelectorAll('.competences').forEach((competence) => {
 
 });
 
+// Fonction pour gérer l'expansion des compétences (à ajouter dans script.js)
+function toggleDetails(element) {
+  // Fermer tous les autres éléments ouverts
+  document.querySelectorAll('.competence-item.open').forEach(item => {
+    if (item !== element) {
+      item.classList.remove('open');
+    }
+  });
+  
+  // Basculer l'élément cliqué
+  element.classList.toggle('open');
+}
+
 
 // Typewriter for H2
 const texts = ["Un projet ?", "Des questions ?", "Contactez moi !"];
