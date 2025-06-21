@@ -58,7 +58,9 @@ footer {
   right: 20px;
   z-index: 9999;
   text-align: right;
+  font-family: "Outfit", sans-serif;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .menu-toggle {
@@ -240,7 +242,7 @@ section#hero {
   color: #333333;
   padding: 12rem 2rem;
   text-align: center;
-  min-height: 80vh;
+  min-height: 90vh;
   overflow: hidden;
   margin: 0;
   display: flex;
@@ -264,6 +266,7 @@ section#hero {
   align-items: center;
   position: absolute;
   bottom: 0;
+  margin-bottom: 5vh;
   left: 20vw;
 }
 
@@ -308,19 +311,14 @@ section#competences {
   text-align: center;
 }
 
-.competences-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1vh;
-  margin-top: 2rem;
-  width: 100%;
-}
+
 
 section#contact {
   position: relative;
   background: white;
   color: #333;
-  padding-top: 25vh;
+  padding-top: 30vh;
+  padding-bottom: 5vh;
   text-align: center;
   min-height: 80vh;
   overflow: hidden;
@@ -358,11 +356,19 @@ section#contact {
   transform: rotate(180deg);
 }
 
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vh;
+  margin-top: 2rem;
+  width: 100%;
+}
+
 .competence-details {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
   padding: 0 10px;
   font-size: 1rem;
 }
@@ -371,7 +377,7 @@ section#contact {
   max-height: 300px;
   opacity: 1;
   margin-top: 10px;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .cursor {
@@ -1023,4 +1029,39 @@ section#contact {
     background: white;
     color: black;
   }
+}
+
+// transi menu
+/* Menu sur fond clair (sections blanches) */
+.menu-container.menu-on-light,
+.menu-container.menu-on-light .menu-toggle,
+.menu-container.menu-on-light .menu-items a {
+  color: #333333;
+}
+
+.menu-container.menu-on-light .menu-items a:hover {
+  color: #ED6237;
+  //background-color: rgba(237, 99, 55, 0.1);
+}
+
+.menu-container.menu-on-light .menu-items a.active {
+  color: #333333;
+  text-decoration-color: #ED6237;
+}
+
+/* Menu sur fond sombre (sections grises) */
+.menu-container.menu-on-dark,
+.menu-container.menu-on-dark .menu-toggle,
+.menu-container.menu-on-dark .menu-items a {
+  color: white;
+}
+
+.menu-container.menu-on-dark .menu-items a:hover {
+  color: #ED6237;
+  //background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-container.menu-on-dark .menu-items a.active {
+  color: white;
+  text-decoration-color: #ED6237;
 }

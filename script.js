@@ -144,3 +144,62 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
+
+// Fonction pour détecter la couleur de fond sous le menu
+function updateMenuColor() {
+  const menu = document.querySelector('.menu-container');
+  const menuRect = menu.getBoundingClientRect();
+  const menuCenterY = menuRect.top + menuRect.height / 2;
+  
+  // Vérifier dans quelle section se trouve le menu
+  const sections = document.querySelectorAll('section');
+  let currentSection = null;
+  
+  sections.forEach(section => {
+    const sectionRect = section.getBoundingClientRect();
+    if (menuCenterY >= sectionRect.top && menuCenterY <= sectionRect.bottom) {
+      currentSection = section;
+    }
+  });
+  
+  // Déterminer la couleur en fonction de la section
+  if (currentSection) {
+    const sectionId = currentSection.id;
+    const sectionStyles = window.getComputedStyle(currentSection);
+    const backgroundColor = sectionStyles.backgroundColor;
+    
+    // Fonction pour convertir rgb en luminosité
+    function getLuminance(rgbString) {
+      const rgb = rgbString.match(/\d+/g);
+      if (!rgb) return 0;
+      
+      const r = parseInt(rgb[0]) / 255;
+      const g = parseInt(rgb[1]) / 255;
+      const b = parseInt(rgb[2]) / 255;
+      
+      return 0.299 * r + 0.587 * g + 0.114 * b;
+    }
+    
+    // Déterminer si le fond est sombre ou clair
+    const luminance = getLuminance(backgroundColor);
+    const isDarkBackground = luminance < 0.5;
+    
+    // Appliquer les styles appropriés
+    if (isDarkBackground) {
+      // Fond sombre = texte blanc
+      menu.classList.add('menu-on-dark');
+      menu.classList.remove('menu-on-light');
+    } else {
+      // Fond clair = texte sombre
+      menu.classList.add('menu-on-light');
+      menu.classList.remove('menu-on-dark');
+    }
+  }
+}
+
+// Écouter le scroll
+window.addEventListener('scroll', updateMenuColor);
+window.addEventListener('resize', updateMenuColor);
+
+// Initialiser au chargement
+document.addEventListener('DOMContentLoaded', updateMenuColor);
