@@ -94,9 +94,9 @@
         <a class="menu-toggle">MENU</a>
         <div class="menu-items">
             <a href="index.html" class="active">ACCUEIL</a>
-            <a>REALISATIONS</a>
+            <a href="realisations.html">REALISATIONS</a>
             <a>A PROPOS</a>
-            <a href="contact.php">CONTACT</a>
+            <a href="#"  class="active">CONTACT</a>
         </div>
         </div>
     </header>
