@@ -33,7 +33,7 @@ function toggleDetails(element) {
 
 
 // Typewriter for H2
-const texts = ["Un projet ?", "Des questions ?", "Contactez moi !"];
+const texts = ["Un projet ?", "Des questions ?", "Contactez-moi !"];
 let index = 0;
 let subIndex = 0;
 let deleting = false;
