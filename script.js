@@ -84,7 +84,7 @@ let deletingTitle = false;
 const typewriterElementTitle = document.getElementById("typewriter-titletext");
 const h1Element = document.getElementById("typewriter-title");
 
-function typeTitle() {
+/*function typeTitle() {
   const currentTitle = titles[titleIndex];
 
   // Toggle underline on the h1 element
@@ -112,12 +112,12 @@ function typeTitle() {
   }
 
   setTimeout(typeTitle, deletingTitle ? deletingSpeed : typingSpeed);
-}
+}*/
 
 // Start both animations
 document.addEventListener("DOMContentLoaded", () => {
   type();
-  typeTitle();
+  //typeTitle();
 });
 
 $(document).ready(function () {
@@ -216,3 +216,11 @@ window.addEventListener('resize', updateMenuColor);
 
 // Initialiser au chargement
 document.addEventListener('DOMContentLoaded', updateMenuColor);
+
+const animation = lottie.loadAnimation({
+  container: document.getElementById('lottie-container'),
+  renderer: 'svg', // ou 'canvas' ou 'html'
+  loop: true,
+  autoplay: true,
+  path: 'AnimationTitre.json'
+});
