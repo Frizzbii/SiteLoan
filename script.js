@@ -216,11 +216,3 @@ window.addEventListener('resize', updateMenuColor);
 
 // Initialiser au chargement
 document.addEventListener('DOMContentLoaded', updateMenuColor);
-
-const animation = lottie.loadAnimation({
-  container: document.getElementById('lottie-container'),
-  renderer: 'svg', // ou 'canvas' ou 'html'
-  loop: true,
-  autoplay: true,
-  path: 'AnimationTitre.json'
-});
