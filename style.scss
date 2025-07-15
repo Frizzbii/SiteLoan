@@ -229,6 +229,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 .contact-image img {
@@ -571,6 +572,7 @@ section#competences {
 
 #typewriter {
   font-size: 3rem;
+  width: 50%;
 }
 
 #parcours {
@@ -868,7 +870,9 @@ section#competences {
     gap: 2rem;
   }*/
 
-  .contact-image,
+  .contact-image{
+    width: 50%;
+  }
   .text-carousel {
     width: 100%;
     justify-content: center;
@@ -968,7 +972,7 @@ section#competences {
 
   /* Contact mobile: titre en dessous de l'image */
   .contact-grid {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1.5rem;
   }
 
@@ -978,10 +982,12 @@ section#competences {
 
   .contact-image {
     order: 1; /* Image avant le titre */
+    width: 80%;
   }
 
   #typewriter {
     font-size: 1.8rem;
+    width: 80%;
   }
 
   .hero-text {
@@ -1051,7 +1057,7 @@ section#competences {
   }
 
   section#contact {
-    padding-top: 15vh;
+    padding-top: 20vh;
     min-height: 50vh;
   }
 
@@ -1061,6 +1067,7 @@ section#competences {
 
   #typewriter {
     font-size: 1.5rem;
+    width: 80%;
   }
 
   h1#typewriter-title {
@@ -1108,6 +1115,10 @@ section#competences {
 
   .text-slide {
     font-size: 1.2rem;
+  }
+
+  #typewriter{
+    width: 80%;
   }
 
   #typewriter,
