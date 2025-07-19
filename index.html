@@ -9,21 +9,647 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary-color: white;
+      --secondary-color: #ED6237;
+      --dark-bg: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: white;
+      overflow-x: hidden;
+    }
+
+    hr {
+      color: var(--secondary-color);
+      margin-bottom: 4vh;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    /* === MENU === */
+    .menu-container {
+      position: fixed;
+      color: #333333;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      text-align: right;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle {
+      width: 100%;
+      color: #333333;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .menu-container:hover .menu-items {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-items a {
+      padding: 8px 12px;
+      margin: 2px 0;
+      text-decoration: none;
+      color: #333333;
+      border-radius: 4px;
+      font-variation-settings: "wght" 400;
+      transition: background-color 0.3s ease, letter-spacing 0.3s ease, font-variation-settings 0.3s ease;
+      cursor: pointer;
+    }
+
+    .menu-items a:hover {
+      letter-spacing: 0.5px;
+      font-variation-settings: "wght" 700;
+    }
+
+    .menu-items a.active {
+      position: relative;
+      font-weight: bold;
+      color: #333333;
+      text-decoration: underline;
+      text-decoration-color: #ED6237;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+
+    /* === HERO SECTION === */
+    section#hero {
+      position: relative;
+      background: white;
+      color: #333333;
+      padding: 0 2rem 2rem 2rem;
+      text-align: center;
+      min-height: 80vh;
+      overflow: hidden;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-text {
+      flex: 1;
+      font-size: 1.5rem;
+      max-width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    .video-container video {
+      position: relative;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform-origin: center center;
+      display: block;
+    }
+
+    /* === WAVE SEPARATOR === */
+    .wave-separator {
+      left: 0;
+      width: 100%;
+      line-height: 0;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .wave-separator svg {
+      display: block;
+      width: 100%;
+      min-width: 1920px;
+      height: auto;
+    }
+
+    .wave-separator.custom {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-separator.custom svg {
+      display: block;
+      width: 100%;
+      min-width: 1920px;
+      height: auto;
+      overflow: hidden;
+      transform: rotate(180deg);
+    }
+
+    /* === À PROPOS SECTION === */
+    section#about {
+      background: #333;
+      color: white;
+      padding: 4rem 2rem;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      width: 100%;
+    }
+
+    .about-text {
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image .profile-photo {
+      width: 300px;
+      height: 400px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 4px solid var(--secondary-color);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+      background: #d14d28;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(237, 99, 55, 0.4);
+    }
+
+    /* === PRESTATIONS SECTION === */
+    section#competences {
+      display: flex;
+      align-items: center;
+      padding: 4rem 2rem;
+      background-color: #333;
+      color: white;
+      min-height: 80vh;
+    }
+
+    .competences-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .competences-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .competences-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      align-items: start;
+      width: 100%;
+    }
+
+    .competence-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      min-height: 200px;
+      justify-content: flex-start;
+      border: 2px solid transparent;
+    }
+
+    .competence-item:hover {
+      transform: translateY(-8px);
+      background: rgba(51, 51, 51, 0.1);
+      border-color: rgba(237, 99, 55, 0.3);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .competence-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .competence-icon-img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .competence-item:hover .competence-icon-img {
+      transform: scale(1.1);
+    }
+
+    .competence-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--secondary-color);
+    }
+
+    .competence-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .competence-details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s ease;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: left;
+      width: 100%;
+    }
+
+    .competence-item.open .competence-details {
+      max-height: 200px;
+      opacity: 1;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(51, 51, 51, 0.2);
+    }
+
+    .expand-indicator {
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+      color: var(--secondary-color);
+      margin-top: auto;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .competence-item.open .expand-indicator {
+      transform: rotate(45deg);
+    }
+
+    /* === RÉALISATIONS SECTION === */
+    section#realisations {
+      position: relative;
+      background: var(--dark-bg);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      min-height: 60vh;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .realisations-header {
+      margin-bottom: 3rem;
+    }
+
+    .realisations-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .realisations-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .realisations {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      text-decoration: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .realisations:hover {
+      transform: scale(1.05);
+    }
+
+    .realisations img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    .realisations .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(237, 99, 55, 0.8), rgba(51, 51, 51, 0.8));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    .realisations .text {
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .realisations:hover .overlay {
+      opacity: 1;
+    }
+
+    /* === TÉMOIGNAGES SECTION === */
+    section#testimonials {
+      background: #333;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .testimonials-header {
+      margin-bottom: 3rem;
+    }
+
+    .testimonials-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      border-left: 4px solid var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+
+    .testimonial-company {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    /* === CONTACT SECTION === */
+    section#contact {
+      position: relative;
+      background: white;
+      color: #333333;
+      padding-top: 35vh;
+      padding-bottom: 5vh;
+      text-align: center;
+      min-height: 80vh;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .contact-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      width: 100%;
+      gap: 2rem;
+    }
+
+    #typewriter {
+      font-size: 3rem;
+      width: 50%;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 1ch;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .contact-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    .contact-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: white;
+      color: #333333;
+      text-align: center;
+      padding: 20px 0;
+      min-height: 10vh;
+    }
+
+    /* === RESPONSIVE === */
+    @media screen and (max-width: 1023px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+      
+      .about-image .profile-photo {
+        width: 250px;
+        height: 320px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .competences-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .realisations-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .realisations {
+        width: 280px;
+        height: 350px;
+      }
+      
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+      
+      .hero-text {
+        max-width: 100%;
+      }
+      
+      .contact-grid {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+      }
+      
+      #typewriter {
+        font-size: 2rem;
+        width: 80%;
+      }
+      
+      .about-text h2,
+      .competences-header h2,
+      .realisations-header h2,
+      .testimonials-header h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="menu-container">
       <a class="menu-toggle">MENU</a>
       <div class="menu-items">
-        <a href="#" class="active">ACCUEIL</a>
-        <a href="realisations.html">REALISATIONS</a>
-        <a>A PROPOS</a>
-        <a href="contact.php">CONTACT</a>
+        <a href="#hero" class="active">ACCUEIL</a>
+        <a href="#about">À PROPOS</a>
+        <a href="#competences">PRESTATIONS</a>
+        <a href="#realisations">RÉALISATIONS</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </div>
   </header>
+
   <main>
+    <!-- HERO SECTION -->
     <section id="hero">
       <div class="hero-content">
         <div class="hero-text">
@@ -32,10 +658,6 @@
               <source src="AnimationTitre.mp4" type="video/mp4">
             </video>
           </div>
-          <!--<h1 id="typewriter-title"><span id="typewriter-titletext"></span><span class="cursor">|</span></h1>-->
-        </div>
-        <div class="hero-image">
-          <img src="assets/img/loan.png" alt="Image de présentation" />
         </div>
       </div>
       <div class="wave-separator custom" style="transform: rotate(-180deg); position: absolute; bottom: 0;">
@@ -45,7 +667,6 @@
               .cls-1 {
                 fill: #333;
               }
-
               .cls-2 {
                 fill: #ed6337;
               }
@@ -57,29 +678,39 @@
       </div>
     </section>
 
+    <!-- À PROPOS SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/img/loan.png" alt="Photo de Loan" class="profile-photo">
+          </div>
+          <div class="about-text">
+            <h2>Moi, c'est Loan</h2>
+            <p>Passionné par l'écriture depuis mon adolescence et attiré par le graphisme, j'ai quitté ma conquête d'éducateur dans la protection de l'enfance pour me lancer à fond dans la communication.</p>
+            <p>Aujourd'hui, je mets mes compétences au service de votre entreprise pour créer des stratégies de communication efficaces qui engagent et connectent vraiment avec votre audience.</p>
+            <a href="#contact" class="cta-button">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MES PRESTATIONS SECTION -->
     <section id="competences">
       <div class="container">
+        <hr>
+        <div class="competences-header">
+          <h2>Mes prestations</h2>
+        </div>
         <div class="competences-grid">
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
               <img src="assets/img/Strat_Com.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Stratégie de communication</div>
+              <div class="competence-title">Audit et stratégie de communication</div>
               <div class="competence-subtitle">Concevoir, planifier et évaluer des actions efficaces</div>
             </div>
             <div class="competence-details">
-              <p>Capacité d'analyse approfondie, résolution de problèmes complexes et développement de stratégies innovantes pour des projets variés.</p>
-            </div>
-            <div class="expand-indicator">+</div>
-          </div>
-
-          <div class="competence-item" onclick="toggleDetails(this)">
-            <div class="competence-header">
-              <img src="assets/img/PAO.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Création de contenu</div>
-              <div class="competence-subtitle">Imaginer et réaliser des visuels impactants</div>
-            </div>
-            <div class="competence-details">
-              <p>Large culture générale, veille technologique constante et capacité à s'adapter aux évolutions du secteur.</p>
+              <p>Analyse approfondie de votre situation actuelle, définition d'objectifs clairs et développement de stratégies sur mesure pour maximiser l'impact de votre communication.</p>
             </div>
             <div class="expand-indicator">+</div>
           </div>
@@ -87,23 +718,23 @@
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
               <img src="assets/img/CM.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Gestion des réseaux sociaux</div>
+              <div class="competence-title">Community Management</div>
               <div class="competence-subtitle">Créer, animer et engager les communautés</div>
             </div>
             <div class="competence-details">
-              <p>Description détaillée de cette compétence. Expertise en design graphique, interface utilisateur et expérience utilisateur. Maîtrise des outils de création moderne.</p>
+              <p>Gestion complète de vos réseaux sociaux : création de contenu, animation de communautés, engagement avec votre audience et développement de votre présence en ligne.</p>
             </div>
             <div class="expand-indicator">+</div>
           </div>
 
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
-              <img src="assets/img/Redac_Web.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Rédaction Web</div>
-              <div class="competence-subtitle">Rédiger pour informer et convaincre</div>
+              <img src="assets/img/PAO.svg" alt="Icône" class="competence-icon-img">
+              <div class="competence-title">Gestion de contenu</div>
+              <div class="competence-subtitle">Imaginer et réaliser des visuels impactants</div>
             </div>
             <div class="competence-details">
-              <p>Excellentes compétences relationnelles, capacité à créer une ambiance positive et à faciliter les échanges en équipe.</p>
+              <p>Création de contenus visuels et éditoriaux adaptés à vos supports : graphisme, rédaction, vidéo, et optimisation pour tous vos canaux de communication.</p>
             </div>
             <div class="expand-indicator">+</div>
           </div>
@@ -111,23 +742,11 @@
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
               <img src="assets/img/SEO.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">SEO</div>
+              <div class="competence-title">Contenu Web et SEO</div>
               <div class="competence-subtitle">Booster la visibilité pour attirer le trafic</div>
             </div>
             <div class="competence-details">
-              <p>Excellentes compétences relationnelles, capacité à créer une ambiance positive et à faciliter les échanges en équipe.</p>
-            </div>
-            <div class="expand-indicator">+</div>
-          </div>
-
-          <div class="competence-item" onclick="toggleDetails(this)">
-            <div class="competence-header">
-              <img src="assets/img/SMA.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">SMA</div>
-              <div class="competence-subtitle">Investir pour toucher la bonne audience</div>
-            </div>
-            <div class="competence-details">
-              <p>Excellentes compétences relationnelles, capacité à créer une ambiance positive et à faciliter les échanges en équipe.</p>
+              <p>Optimisation de votre référencement naturel, création de contenus web performants et stratégies pour améliorer votre visibilité sur les moteurs de recherche.</p>
             </div>
             <div class="expand-indicator">+</div>
           </div>
@@ -135,56 +754,75 @@
       </div>
     </section>
 
+    <!-- MES RÉALISATIONS SECTION -->
     <section id="realisations">
-      <div class="container centered">
-        <div>
-          <div class="centered">
-            <a class="realisations" href="#">
-            <img src="assets/img/loan.png" alt="Réalisations">
+      <div class="container" style="max-width: 100%;">
+        <hr>
+        <div class="realisations-header">
+          <h2>Mes réalisations</h2>
+        </div>
+        <div class="realisations-grid">
+          <a class="realisations" href="#">
+            <img src="assets/img/loan.png" alt="Réseaux / Rapports Médiatiques Sociaux">
             <div class="overlay">
-              <span class="text">Voir plus</span>
+              <span class="text">Réseaux Sociaux<br>Rapports Médiatiques</span>
             </div>
           </a>
 
           <a class="realisations" href="#">
-            <img src="assets/img/loan.png" alt="Réalisations">
+            <img src="assets/img/loan.png" alt="Étranger Espagne Event">
             <div class="overlay">
-              <span class="text">Voir plus</span>
+              <span class="text">Événementiel<br>International</span>
             </div>
           </a>
 
           <a class="realisations" href="#">
-            <img src="assets/img/loan.png" alt="Réalisations">
+            <img src="assets/img/loan.png" alt="Création Publicité">
             <div class="overlay">
-              <span class="text">Voir plus</span>
+              <span class="text">Création<br>Publicitaire</span>
             </div>
           </a>
-          </div>
+
+          <a class="realisations" href="#">
+            <img src="assets/img/loan.png" alt="Illustration">
+            <div class="overlay">
+              <span class="text">Illustration<br>& Design</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="parcours">
+    <!-- ILS ME FONT CONFIANCE SECTION -->
+    <section id="testimonials">
       <div class="container">
-        <div class="swiper-container-wrapper swiper-container-wrapper--timeline">
-          <!-- Timeline -->
-          <ul class="swiper-pagination-custom">
-            <li class='swiper-pagination-switch first active'><span class='switch-title'>1911</span></li>
-            <li class='swiper-pagination-switch'><span class='switch-title'>1970</span></li>
-            <li class='swiper-pagination-switch'><span class='switch-title'>2021</span></li>
-            <li class='swiper-pagination-switch last'><span class='switch-title'>3000</span></li>
-          </ul>
-          <!-- Progressbar -->
-          <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"></div>
-          <!-- Swiper -->
-          <div class="swiper swiper-container swiper-container--timeline">
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><span class="title">Swiper Timeline Progressbar</span></div>
-              <div class="swiper-slide"><span class="title">Title 2</span></div>
-              <div class="swiper-slide"><span class="title">Title 3</span></div>
-              <div class="swiper-slide"><span class="title">Title 4</span></div>
+        <hr>
+        <div class="testimonials-header">
+          <h2>Ils me font confiance</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "Loan a su parfaitement cerner nos besoins et créer une stratégie de communication qui nous ressemble. Les résultats sont au rendez-vous !"
             </div>
+            <div class="testimonial-author">Marie Dubois</div>
+            <div class="testimonial-company">Directrice Marketing, TechStart</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "Un professionnel créatif et à l'écoute. Nos réseaux sociaux n'ont jamais été aussi dynamiques et engageants."
+            </div>
+            <div class="testimonial-author">Thomas Martin</div>
+            <div class="testimonial-company">CEO, Digital Solutions</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "Grâce à son expertise en SEO, notre visibilité web a considérablement augmenté. Je recommande vivement ses services."
+            </div>
+            <div class="testimonial-author">Sophie Laurent</div>
+            <div class="testimonial-company">Fondatrice, Green Future</div>
           </div>
         </div>
       </div>
