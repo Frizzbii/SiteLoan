@@ -144,7 +144,6 @@
 
     .menu-container.menu-on-light .menu-items a:hover {
       color: #ED6237;
-      //background-color: rgba(237, 99, 55, 0.1);
     }
 
     .menu-container.menu-on-light .menu-items a.active {
@@ -856,6 +855,306 @@
         -moz-osx-font-smoothing: grayscale;
       }
     }
+
+    /* === TÉMOIGNAGES SECTION === */
+    section#testimonials {
+      background: var(--dark-bg);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      padding-bottom: 8vw;
+    }
+
+    .testimonials-header {
+      margin-bottom: 3rem;
+    }
+
+    .testimonials-header h2 {
+      font-size: var(--font-2xl);
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+
+    /* === CAROUSEL CONTAINER === */
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .carousel-wrapper {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .testimonials-carousel {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    /* === TESTIMONIAL CARDS === */
+    .testimonial-card {
+      flex: 0 0 100%;
+      background: rgba(255, 255, 255, 0.05);
+      transition: all 0.5s ease;
+      opacity: 0.7;
+      border: 3px solid #ED6237;
+    }
+
+    .testimonial-card.active {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .testimonial-image {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary-color), #d14d28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 20px rgba(237, 99, 55, 0.3);
+    }
+
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      font-size: var(--font-base);
+      position: relative;
+    }
+
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+      font-size: var(--font-lg);
+    }
+
+    .testimonial-company {
+      font-size: 1rem;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    /* === CAROUSEL BUTTONS === */
+    .carousel-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(237, 99, 55, 0.3);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      flex-shrink: 0;
+    }
+
+    .carousel-btn:hover {
+      background: var(--secondary-color);
+      border-color: var(--secondary-color);
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .carousel-btn:active {
+      transform: scale(0.95);
+    }
+
+    .carousel-btn svg {
+      transition: transform 0.2s ease;
+    }
+
+    .carousel-btn:hover svg {
+      transform: scale(1.2);
+    }
+
+    /* === CAROUSEL INDICATORS === */
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(237, 99, 55, 0.4);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .indicator::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      transform: translate(-50%, -50%);
+    }
+
+    .indicator:hover::before,
+    .indicator.active::before {
+      width: 100%;
+      height: 100%;
+    }
+
+    .indicator.active {
+      border-color: var(--secondary-color);
+      transform: scale(1.2);
+    }
+
+    .indicator:hover {
+      border-color: var(--secondary-color);
+      transform: scale(1.1);
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .testimonial-card.active {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* === RESPONSIVE === */
+    @media screen and (max-width: 768px) {
+      .carousel-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 700px;
+      }
+
+      .carousel-wrapper{
+        max-width: 700px;
+      }
+      
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .testimonial-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .image-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+      }
+      
+      .testimonials-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .carousel-container {
+        gap: 1rem;
+        max-width: 350px;
+      }
+
+      .carousel-wrapper{
+        max-width: 350px;
+      }
+      
+      .carousel-btn {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .testimonial-card {
+        padding: 1.5rem 1rem;
+      }
+      
+      .testimonial-content::before,
+      .testimonial-content::after {
+        display: none;
+      }
+      
+      .indicator {
+        width: 10px;
+        height: 10px;
+      }
+      
+      .carousel-indicators {
+        gap: 0.6rem;
+      }
+    }
+
+    /* === ACCESSIBILITY === */
+    @media (prefers-reduced-motion: reduce) {
+      .testimonials-carousel,
+      .testimonial-card,
+      .carousel-btn,
+      .indicator {
+        transition: none;
+      }
+      
+      .testimonial-card.active {
+        animation: none;
+      }
+    }
+
+    /* === FOCUS STYLES === */
+    .carousel-btn:focus,
+    .indicator:focus {
+      outline: 2px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+
+    /* === HIGH CONTRAST MODE === */
+    @media (prefers-contrast: high) {
+      .testimonial-card {
+        border: 2px solid white;
+      }
+      
+      .carousel-btn {
+        border-width: 3px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1017,38 +1316,94 @@
 
     <!-- ILS ME FONT CONFIANCE SECTION -->
     <section id="testimonials">
-      <div class="container">
-        <hr>
-        <div class="testimonials-header">
-          <h2>Ils me font confiance</h2>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "Loan a su parfaitement cerner nos besoins et créer une stratégie de communication qui nous ressemble. Les résultats sont au rendez-vous !"
-            </div>
-            <div class="testimonial-author">Marie Dubois</div>
-            <div class="testimonial-company">Directrice Marketing, TechStart</div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "Un professionnel créatif et à l'écoute. Nos réseaux sociaux n'ont jamais été aussi dynamiques et engageants."
-            </div>
-            <div class="testimonial-author">Thomas Martin</div>
-            <div class="testimonial-company">CEO, Digital Solutions</div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "Grâce à son expertise en SEO, notre visibilité web a considérablement augmenté. Je recommande vivement ses services."
-            </div>
-            <div class="testimonial-author">Sophie Laurent</div>
-            <div class="testimonial-company">Fondatrice, Green Future</div>
-          </div>
-        </div>
+    <div class="container">
+      <hr>
+      <div class="testimonials-header">
+        <h2>Ils me font confiance</h2>
       </div>
-    </section>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Témoignage précédent">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        
+        <div class="carousel-wrapper">
+          <div class="testimonials-carousel" id="testimonialsCarousel">
+            <div class="testimonial-card active">
+              <div class="testimonial-image">
+                <div class="image-placeholder"><img src="assets/img/loan.png" style="height: 100%;"></div>
+              </div>
+              <div class="testimonial-content">
+                "Loan a su parfaitement cerner nos besoins et créer une stratégie de communication qui nous ressemble. Les résultats sont au rendez-vous !"
+              </div>
+              <div class="testimonial-author">Marie Dubois</div>
+              <div class="testimonial-company">Directrice Marketing, TechStart</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <div class="image-placeholder"><img src="assets/img/loan.png" style="height: 100%;"></div>
+              </div>
+              <div class="testimonial-content">
+                "Un professionnel créatif et à l'écoute. Nos réseaux sociaux n'ont jamais été aussi dynamiques et engageants."
+              </div>
+              <div class="testimonial-author">Thomas Martin</div>
+              <div class="testimonial-company">CEO, Digital Solutions</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <div class="image-placeholder"><img src="assets/img/loan.png" style="height: 100%;"></div>
+              </div>
+              <div class="testimonial-content">
+                "Grâce à son expertise en SEO, notre visibilité web a considérablement augmenté. Je recommande vivement ses services."
+              </div>
+              <div class="testimonial-author">Sophie Laurent</div>
+              <div class="testimonial-company">Fondatrice, Green Future</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <div class="image-placeholder"><img src="assets/img/loan.png" style="height: 100%;"></div>
+              </div>
+              <div class="testimonial-content">
+                "Une collaboration exceptionnelle qui a transformé notre image de marque. Loan comprend vraiment les enjeux de la communication moderne."
+              </div>
+              <div class="testimonial-author">Alexandre Chen</div>
+              <div class="testimonial-company">Directeur Créatif, Innovation Lab</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <div class="image-placeholder"><img src="assets/img/loan.png" style="height: 100%;"></div>
+              </div>
+              <div class="testimonial-content">
+                "Depuis que nous travaillons avec Loan, notre engagement client a doublé. Son approche stratégique fait vraiment la différence."
+              </div>
+              <div class="testimonial-author">Émilie Rodriguez</div>
+              <div class="testimonial-company">Responsable Communication, StartUp Nation</div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-btn-next" aria-label="Témoignage suivant">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-indicators">
+        <button class="indicator active" data-slide="0" aria-label="Aller au témoignage 1"></button>
+        <button class="indicator" data-slide="1" aria-label="Aller au témoignage 2"></button>
+        <button class="indicator" data-slide="2" aria-label="Aller au témoignage 3"></button>
+        <button class="indicator" data-slide="3" aria-label="Aller au témoignage 4"></button>
+        <button class="indicator" data-slide="4" aria-label="Aller au témoignage 5"></button>
+      </div>
+    </div>
+  </section>
 
     <section id="contact">
       <div class="wave-separator custom">

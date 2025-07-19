@@ -216,3 +216,84 @@ window.addEventListener('resize', updateMenuColor);
 
 // Initialiser au chargement
 document.addEventListener('DOMContentLoaded', updateMenuColor);
+
+class TestimonialsCarousel {
+      constructor() {
+        this.currentSlide = 0;
+        this.totalSlides = document.querySelectorAll('.testimonial-card').length;
+        this.carousel = document.getElementById('testimonialsCarousel');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.prevBtn = document.querySelector('.carousel-btn-prev');
+        this.nextBtn = document.querySelector('.carousel-btn-next');
+        
+        this.init();
+      }
+      
+      init() {
+        this.setupEventListeners();
+        this.updateCarousel();
+        this.startAutoplay();
+      }
+      
+      setupEventListeners() {
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        this.indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Pause autoplay on hover
+        this.carousel.addEventListener('mouseenter', () => this.stopAutoplay());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoplay());
+      }
+      
+      nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+        this.updateCarousel();
+      }
+      
+      prevSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.updateCarousel();
+      }
+      
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateCarousel();
+      }
+      
+      updateCarousel() {
+        // Update cards
+        const cards = document.querySelectorAll('.testimonial-card');
+        cards.forEach((card, index) => {
+          card.classList.toggle('active', index === this.currentSlide);
+        });
+        
+        // Update indicators
+        this.indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === this.currentSlide);
+        });
+        
+        // Transform carousel
+        const translateX = -this.currentSlide * 100;
+        this.carousel.style.transform = `translateX(${translateX}%)`;
+      }
+      
+      startAutoplay() {
+        this.autoplayInterval = setInterval(() => {
+          this.nextSlide();
+        }, 5000);
+      }
+      
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+        }
+      }
+    }
+    
+    // Initialize carousel when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      new TestimonialsCarousel();
+    });
