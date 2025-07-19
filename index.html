@@ -135,6 +135,39 @@
       text-underline-offset: 4px;
     }
 
+    /* Menu sur fond clair (sections blanches) */
+    .menu-container.menu-on-light,
+    .menu-container.menu-on-light .menu-toggle,
+    .menu-container.menu-on-light .menu-items a {
+      color: #333333;
+    }
+
+    .menu-container.menu-on-light .menu-items a:hover {
+      color: #ED6237;
+      //background-color: rgba(237, 99, 55, 0.1);
+    }
+
+    .menu-container.menu-on-light .menu-items a.active {
+      color: #333333;
+      text-decoration-color: #ED6237;
+    }
+
+    /* Menu sur fond sombre (sections grises) */
+    .menu-container.menu-on-dark,
+    .menu-container.menu-on-dark .menu-toggle,
+    .menu-container.menu-on-dark .menu-items a {
+      color: white;
+    }
+
+    .menu-container.menu-on-dark .menu-items a:hover {
+      color: #ED6237;
+    }
+
+    .menu-container.menu-on-dark .menu-items a.active {
+      color: white;
+      text-decoration-color: #ED6237;
+    }
+
     /* === HERO SECTION === */
     section#hero {
       position: relative;
@@ -480,6 +513,7 @@
       color: white;
       padding: 4rem 2rem;
       text-align: center;
+      padding-bottom: 8vw;
     }
 
     .testimonials-header {
@@ -831,7 +865,6 @@
       <div class="menu-items">
         <a href="#hero" class="active">ACCUEIL</a>
         <a href="#about">À PROPOS</a>
-        <a href="#competences">PRESTATIONS</a>
         <a href="#realisations">RÉALISATIONS</a>
         <a href="#contact">CONTACT</a>
       </div>
@@ -895,7 +928,7 @@
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
               <img src="assets/img/Strat_Com.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Audit et Stratégie</div>
+              <div class="competence-title">Audit et stratégie</div>
               <div class="competence-subtitle">Concevoir et planifier des actions efficaces</div>
             </div>
             <div class="competence-details">
@@ -919,7 +952,7 @@
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
               <img src="assets/img/PAO.svg" alt="Icône" class="competence-icon-img">
-              <div class="competence-title">Gestion de contenu</div>
+              <div class="competence-title">Création de contenu</div>
               <div class="competence-subtitle">Imaginer et réaliser des visuels impactants</div>
             </div>
             <div class="competence-details">
@@ -930,7 +963,7 @@
 
           <div class="competence-item" onclick="toggleDetails(this)">
             <div class="competence-header">
-              <img src="assets/img/SEO.svg" alt="Icône" class="competence-icon-img">
+              <img src="assets/img/Redac_Web.svg" alt="Icône" class="competence-icon-img">
               <div class="competence-title">Contenu Web et SEO</div>
               <div class="competence-subtitle">Booster la visibilité pour attirer le trafic</div>
             </div>
