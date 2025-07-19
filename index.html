@@ -235,6 +235,7 @@
       font-size: 1.2rem;
       line-height: 1.8;
       text-align: justify;
+      flex-grow: 2;
     }
 
     .about-text h2 {
@@ -253,6 +254,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-grow: 1;
+      flex-shrink: 2;
     }
 
     .about-image .profile-photo {
@@ -265,7 +268,7 @@
       display: inline-block;
       background: var(--secondary-color);
       color: white;
-      padding: 12px 24px;
+      padding: 6px 18px;
       text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
@@ -368,7 +371,7 @@
       overflow: hidden;
       opacity: 0;
       transition: all 0.4s ease;
-      font-size: 0.8rem;
+      font-size: 1rem;
       line-height: 1.6;
       text-align: left;
       width: 100%;
@@ -377,8 +380,6 @@
     .competence-item.open .competence-details {
       max-height: 200px;
       opacity: 1;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(51, 51, 51, 0.2);
     }
 
     .expand-indicator {
@@ -586,6 +587,7 @@
       text-align: center;
       padding: 20px 0;
       min-height: 10vh;
+      font-size: 1.2rem;
     }
 
     /* === RESPONSIVE === */
