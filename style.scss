@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  //max-width: 1200px;
   margin: auto;
   padding: 0 20px;
   width: 100%;
@@ -716,7 +716,7 @@ section#competences {
 /* Large Desktop (1440px and up) */
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1400px;
+    //max-width: 1400px;
   }
   
   #typewriter {
@@ -1275,7 +1275,6 @@ section#competences {
   width: 100%;
   height: auto;
   object-fit: cover; // Changé de fill à cover pour un meilleur rendu
-  //transform: scale(1.5); // Réduit le scale pour une meilleure lisibilité
   transform-origin: center center;
   display: block;
 }

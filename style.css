@@ -15,7 +15,6 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   margin: auto;
   padding: 0 20px;
   width: 100%;
@@ -686,9 +685,6 @@ section#competences {
 /* === RESPONSIVE BREAKPOINTS === */
 /* Large Desktop (1440px and up) */
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1400px;
-  }
   #typewriter {
     font-size: 4rem;
   }
