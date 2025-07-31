@@ -205,7 +205,7 @@
             <div class="menu-items">
                 <a href="index.html">ACCUEIL</a>
                 <a href="realisations.html">REALISATIONS</a>
-                <a>A PROPOS</a>
+                <a href="apropos.html">A PROPOS</a>
                 <a href="#" class="active">CONTACT</a>
             </div>
         </div>
