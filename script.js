@@ -259,3 +259,79 @@ class TestimonialsCarousel {
     document.addEventListener('DOMContentLoaded', () => {
       new TestimonialsCarousel();
     });
+
+class TestimonialsSimple {
+  constructor() {
+    this.testimonials = [
+      {
+        image: "assets/img/loan.png",
+        text: "Loan a su parfaitement cerner nos besoins et créer une stratégie de communication qui nous ressemble. Les résultats sont au rendez-vous ! Son approche professionnelle et créative a vraiment fait la différence pour notre entreprise."
+      },
+      {
+        image: "assets/img/loan.png", 
+        text: "Un professionnel créatif et à l'écoute. Nos réseaux sociaux n'ont jamais été aussi dynamiques et engageants. Je recommande vivement ses services."
+      },
+      {
+        image: "assets/img/loan.png",
+        text: "Grâce à son expertise en SEO, notre visibilité web a considérablement augmenté. Une collaboration exceptionnelle qui a transformé notre image de marque."
+      }
+    ];
+    
+    this.currentIndex = 0;
+    this.isTransitioning = false;
+    this.init();
+  }
+  
+  init() {
+    const prevBtn = document.querySelector('.nav-prev');
+    const nextBtn = document.querySelector('.nav-next');
+    
+    prevBtn?.addEventListener('click', () => this.showPrevious());
+    nextBtn?.addEventListener('click', () => this.showNext());
+  }
+  
+  showPrevious() {
+    if (this.isTransitioning) return;
+    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    this.updateTestimonial();
+  }
+  
+  showNext() {
+    if (this.isTransitioning) return;
+    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+    this.updateTestimonial();
+  }
+  
+  updateTestimonial() {
+    if (this.isTransitioning) return;
+    
+    this.isTransitioning = true;
+    const testimonial = this.testimonials[this.currentIndex];
+    const card = document.querySelector('.testimonial-card');
+    const image = card.querySelector('.testimonial-image img');
+    const text = card.querySelector('.testimonial-content p');
+    
+    // Ajouter la classe de transition
+    card.classList.add('transitioning');
+    
+    setTimeout(() => {
+      // Changer le contenu
+      image.src = testimonial.image;
+      text.textContent = `"${testimonial.text}"`;
+      
+      // Retirer la classe de transition
+      card.classList.remove('transitioning');
+      
+      // Permettre les transitions suivantes
+      setTimeout(() => {
+        this.isTransitioning = false;
+      }, 100);
+      
+    }, 150);
+  }
+}
+
+// Initialiser quand le DOM est chargé
+document.addEventListener('DOMContentLoaded', () => {
+  new TestimonialsSimple();
+});
